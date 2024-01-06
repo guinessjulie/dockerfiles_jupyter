@@ -39,7 +39,34 @@ $ docker images
   joonowayout/numpy        latest                710d1e79b219   5 minutes ago   1.25GB
 
 # create registry in docker hub (joonowayout/numpy)
-1. hub.docke.com > create Registry
-docker login
-docker push joonowayout/numpy:latest
+login hub.docke.com > create Registry numpy
+$ docker login
+$ docker push joonowayout/numpy:latest
+  latest: digest: sha256:40f43da4e461e59dd3c8a50b25c7d5893e379fdf981128a63001afb9af499d72 size: 4697
+$ git init
+  ...
+  Initialized empty Git repository in /home/joo/docker/data-science/ch6_dockerfiles/.git/
+$ git add ./numpy/Dockerfile
+$ git commit -m 'from jupyter/base-notebook, numpy installed'
+[master (root-commit) e93e912] from jupyter/base-notebook, numpy installed
+ 2 files changed, 49 insertions(+)
+ create mode 100644 numpy/Dockerfile
+ create mode 100644 numpy/command.sh
+$ git remote add origin https://github.com/guinessjulie/dockerfiles_jupyter.git
+$ git push -u origin master
+  Username for 'https://github.com': guinessjulie
+  Password for 'https://guinessjulie@github.com':
+  Enumerating objects: 5, done.
+  Counting objects: 100% (5/5), done.
+  Delta compression using up to 32 threads
+  Compressing objects: 100% (4/4), done.
+  Writing objects: 100% (5/5), 1.23 KiB | 1.23 MiB/s, done.
+  Total 5 (delta 0), reused 0 (delta 0), pack-reused 0
+  To https://github.com/guinessjulie/dockerfiles_jupyter.git
+   * [new branch]      master -> master
+  Branch 'master' set up to track remote branch 'master' from 'origin'.
+$ git push -u origin master
+  Branch 'master' set up to track remote branch 'master' from 'origin'.
+  Everything up-to-date
+$
 
