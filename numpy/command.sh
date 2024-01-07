@@ -68,5 +68,19 @@ $ git push -u origin master
 $ git push -u origin master
   Branch 'master' set up to track remote branch 'master' from 'origin'.
   Everything up-to-date
-$
+$ git add ./numpy/command.sh
+$ git commit -m 'terminal command instructions so far'
+  [master 432a0ed] terminal command instructions so far
+  1 file changed, 30 insertions(+), 3 deletions(-)
+$ git push
+  Enumerating objects: 7, done.
+  Counting objects: 100% (7/7), done.
+  Delta compression using up to 32 threads
+  Compressing objects: 100% (3/3), done.
+  Writing objects: 100% (4/4), 1008 bytes | 1008.00 KiB/s, done.
+  Total 4 (delta 1), reused 0 (delta 0), pack-reused 0
+  remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+  To https://github.com/guinessjulie/dockerfiles_jupyter.git
+     e93e912..432a0ed  master -> master
+
 
